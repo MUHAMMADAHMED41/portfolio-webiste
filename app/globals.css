@@ -22,6 +22,9 @@ body {
   font-family: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", sans-serif;
   overflow-x: hidden;
 }
+img { user-select: none; -webkit-user-drag: none; }
+body { -webkit-touch-callout: none; }
+a[href$=".pdf"] { pointer-events: none; }
 ::selection { background: var(--ember); color: white; }
 .grid-lines { background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 72px 72px; mask-image: linear-gradient(to bottom, black 0%, transparent 75%); }
 .glass { background: linear-gradient(135deg, rgba(24,24,27,.74), rgba(9,9,11,.58)); border: 1px solid rgba(255,255,255,.1); box-shadow: inset 0 1px rgba(255,255,255,.055), 0 24px 80px rgba(0,0,0,.2); backdrop-filter: blur(18px); }
