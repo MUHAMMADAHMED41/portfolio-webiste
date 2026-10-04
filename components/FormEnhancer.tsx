@@ -23,7 +23,8 @@ export function FormEnhancer() {
       message?.before(label);
     });
     const handlers = forms.map((form) => {
-      const handler = () => {
+      const handler = (event: SubmitEvent) => {
+        event.preventDefault();
         const data = new FormData(form);
         const message = `Hello Muhammad, I am ${data.get("name") ?? ""}. I found your portfolio and would like to discuss a project or collaboration.\n\nEmail: ${data.get("email") ?? ""}\nMobile: ${data.get("mobile") ?? "Not provided"}\n\nMessage: ${data.get("message") ?? ""}`;
         window.open(`${whatsappUrl.split("?text=")[0]}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");

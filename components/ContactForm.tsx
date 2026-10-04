@@ -7,6 +7,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
   const pageclipUrl = process.env.NEXT_PUBLIC_PAGECLIP_URL ?? "https://send.pageclip.co/portfolio-contact";
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
     const form = event.currentTarget;
     const data = new FormData(form);
     const name = String(data.get("name") ?? "");
