@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   openGraph: { title: "Muhammad Ahmed | Computer Engineer & Lead AI Architect", description: "Computer Engineer and AI Architect building practical AI, edge, security, and automation systems.", url: "https://muhammadahmedme.live", siteName: "Muhammad Ahmed", type: "website", images: [{ url: "/pfp.jpeg", width: 460, height: 460, alt: "Muhammad Ahmed" }] },
   twitter: { card: "summary_large_image", title: "Muhammad Ahmed | Computer Engineer & Lead AI Architect", description: "Computer Engineer and AI Architect building practical AI, edge, security, and automation systems.", images: ["/pfp.jpeg"] },
   robots: { index: true, follow: true },
+  icons: { icon: "/icon.svg", shortcut: "/icon.svg", apple: "/icon.svg" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
