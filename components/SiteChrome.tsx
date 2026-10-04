@@ -1,0 +1,25 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { calendlyUrl, githubUrl, googleDeveloperUrl, linkedinUrl, whatsappUrl } from "@/lib/portfolio-data";
+
+export function SiteNav() {
+  return <nav className="glass fixed left-1/2 top-4 z-50 flex w-[calc(100%-2rem)] max-w-6xl -translate-x-1/2 items-center justify-between rounded-full px-4 py-3 sm:px-6"><Link href="/" className="font-mono text-sm font-bold tracking-[-0.08em] text-white">MA<span className="text-orange-500">.</span></Link><div className="hidden items-center gap-6 text-xs text-zinc-400 md:flex"><a className="hover:text-white" href="/experience">Experience</a><a className="hover:text-white" href="/projects">Projects</a><a className="hover:text-white" href="/credentials">Credentials</a><a className="hover:text-white" href="/certificates">Certificates</a><a className="hover:text-white" href="/contact">Contact</a></div><a href={calendlyUrl} target="_blank" rel="noreferrer" className="rounded-full bg-orange-500 px-4 py-2 text-xs font-bold text-black transition hover:bg-orange-400">Book a call <span aria-hidden="true">↗</span></a></nav>;
+}
+
+export function ContactFloaters() {
+  return <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3"><motion.a whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.96 }} href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Contact Muhammad Ahmed on WhatsApp" className="flex h-14 w-14 items-center justify-center rounded-full border border-emerald-300/30 bg-emerald-500 text-white shadow-[0_0_30px_rgba(16,185,129,0.35)]"><svg aria-hidden="true" viewBox="0 0 32 32" className="h-7 w-7 fill-current"><path d="M16 3.5a12.5 12.5 0 0 0-10.7 19l-1.5 5.4 5.5-1.5A12.5 12.5 0 1 0 16 3.5Zm0 22.8c-2 0-3.9-.6-5.5-1.7l-.4-.2-3.2.9.9-3.1-.3-.5A10 10 0 1 1 16 26.3Zm5.5-7.4c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.8-3.1-.3-.5.3-.5.8-1.6.1-.2.1-.4 0-.6l-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.4 4.7 2 .8 2.6.8 3.5.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4 0-.2-.2-.2-.5-.3Z" /></svg></motion.a><a href={calendlyUrl} target="_blank" rel="noreferrer" className="hidden rounded-full border border-orange-400/30 bg-zinc-950/90 px-4 py-2 text-xs font-medium text-orange-200 shadow-xl backdrop-blur-md sm:block">Schedule an appointment ↗</a></div>;
+}
+
+export function PageShell({ children }: { children: React.ReactNode }) {
+  return <><SiteNav /><div className="pointer-events-none fixed inset-0 z-0 opacity-60" aria-hidden="true"><div className="grid-lines absolute inset-0" /><motion.div animate={{ x: [0, 80, 0], y: [0, 30, 0] }} transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }} className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-orange-700/20 blur-3xl" /><motion.div animate={{ x: [0, -60, 0], y: [0, 50, 0] }} transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }} className="absolute right-[-12rem] top-[30rem] h-[32rem] w-[32rem] rounded-full bg-red-700/15 blur-3xl" /></div><main className="relative z-10 min-h-screen bg-[#09090b] pt-28 text-zinc-100">{children}</main><Footer /><ContactFloaters /></>;
+}
+
+export function Footer() {
+  return <footer className="relative z-10 border-t border-white/10 bg-[#09090b] px-6 py-8 text-xs text-zinc-500 sm:px-10 lg:px-16"><div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><span>© 2026 Muhammad Ahmed. Computer Engineer &amp; Lead AI Architect.</span><div className="flex flex-wrap gap-5"><a href={githubUrl} target="_blank" rel="noreferrer" className="hover:text-white">GitHub ↗</a><a href={linkedinUrl} target="_blank" rel="noreferrer" className="hover:text-white">LinkedIn ↗</a><a href={googleDeveloperUrl} target="_blank" rel="noreferrer" className="hover:text-white">Google Developer Profile ↗</a><a href="mailto:ahmaadsarfraz@gmail.com" className="hover:text-orange-300">Email ↗</a></div></div></footer>;
+}
+
+export function PageIntro({ kicker, title, description }: { kicker: string; title: string; description: string }) {
+  return <header className="mx-auto max-w-7xl px-6 pb-16 pt-16 sm:px-10 lg:px-16"><p className="mb-4 font-mono text-xs uppercase tracking-[0.24em] text-orange-500">{kicker}</p><h1 className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.07em] sm:text-8xl">{title}</h1><p className="mt-7 max-w-2xl text-sm leading-7 text-zinc-400">{description}</p></header>;
+}

@@ -1,0 +1,6 @@
+import { PageIntro, PageShell } from "@/components/SiteChrome";
+import { experience } from "@/lib/portfolio-data";
+
+export default function ExperiencePage() {
+  return <PageShell><PageIntro kicker="01 / Field notes" title="Experience that compounds." description="A timeline of engineering, consulting, founder, and youth-advocacy work across AI, automation, infrastructure, and practical career acceleration." /><section className="mx-auto max-w-5xl px-6 pb-32 sm:px-10">{experience.map((item, index) => <article key={item.company + item.period} className="group grid gap-6 border-t border-white/10 py-10 md:grid-cols-[180px_1fr]"><div><p className="font-mono text-xs text-orange-500">0{index + 1}</p><p className="mt-3 text-xs leading-5 text-zinc-500">{item.period}</p></div><div><h2 className="text-2xl font-semibold tracking-[-0.04em] text-zinc-100">{item.role}</h2><p className="mt-2 text-sm text-orange-400">{item.company} <span className="text-zinc-600">/</span> {item.location}</p><ul className="mt-7 space-y-4 text-sm leading-7 text-zinc-400">{item.details.map((detail) => <li key={detail} className="border-l border-orange-500/40 pl-5">{detail}</li>)}</ul></div></article>)}</section></PageShell>;
+}

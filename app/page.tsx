@@ -1,69 +1,38 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { PageShell } from "@/components/SiteChrome";
+import { ciscoBadges, experience, freelanceProjects, googleBadges, linkedinUrl, microsoftBadgeImage, microsoftBadges } from "@/lib/portfolio-data";
+
+const projects = freelanceProjects.slice(0, 3).map((project) => [project.title, project.category, project.outcome] as const);
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+  const pageclipUrl = process.env.NEXT_PUBLIC_PAGECLIP_URL ?? "https://send.pageclip.co/portfolio-contact";
+  const providerBadges = [
+    ...googleBadges.slice(0, 8).map((badge) => ({ title: badge.title, image: badge.image })),
+    ...microsoftBadges.slice(0, 5).map((title) => ({ title, image: microsoftBadgeImage })),
+    ...ciscoBadges.map((badge) => ({ title: badge.title, image: badge.image })),
+  ];
+  const marqueeBadges = [...providerBadges, ...providerBadges];
+
+  return <PageShell>
+    <section className="relative mx-auto flex min-h-[730px] max-w-7xl items-center px-6 pb-28 pt-20 sm:px-10 lg:px-16">
+      <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="relative z-10 max-w-5xl">
+        <p className="mb-8 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-zinc-500"><span className="h-2 w-2 animate-pulse rounded-full bg-orange-500" /> Computer Engineer / AI Architect</p>
+        <div className="mb-8 flex items-center gap-5 sm:hidden"><div className="relative h-20 w-20 overflow-hidden rounded-full border border-orange-400/40 bg-zinc-900"><Image src="/pfp.jpeg" alt="Muhammad Ahmed" fill sizes="80px" className="object-cover" /></div><span className="font-mono text-xs uppercase tracking-[0.18em] text-orange-300">Muhammad Ahmed</span></div><h1 className="text-6xl font-semibold leading-[0.92] tracking-[-0.075em] sm:text-8xl lg:text-[9.5rem]">Muhammad<br /><span className="text-gradient">Ahmed.</span></h1>
+        <div className="mt-10 grid max-w-4xl gap-8 border-t border-white/10 pt-7 md:grid-cols-[1fr_1.1fr]"><p className="text-xl font-medium text-zinc-200 sm:text-2xl">Computer Engineer <span className="text-orange-500">&amp;</span><br />Lead AI Architect.</p><div><p className="max-w-lg text-sm leading-7 text-zinc-400">Architecting scalable multi-agent AI ecosystems, deploying edge-based computer vision, and engineering production-grade automation infrastructure.</p><div className="mt-7 flex flex-wrap gap-3"><a href="/projects" className="rounded-full bg-orange-500 px-5 py-3 text-sm font-bold text-black shadow-[0_0_35px_rgba(255,69,0,0.25)] hover:bg-orange-400">View projects ↘</a><a href="/contact" className="rounded-full border border-white/15 px-5 py-3 text-sm text-zinc-200 hover:border-orange-500/60">Get in touch ↗</a></div></div></div>
+      </motion.div><div className="absolute right-8 top-24 hidden h-64 w-52 overflow-hidden rounded-[2rem] border border-orange-400/30 bg-zinc-900/60 shadow-[0_0_70px_rgba(255,69,0,0.16)] sm:block lg:right-20 lg:h-80 lg:w-64"><Image src="/pfp.jpeg" alt="Muhammad Ahmed" fill sizes="256px" className="object-cover" priority /></div>
+    </section>
+
+    <section className="overflow-hidden border-y border-white/10 bg-white/[0.02] py-5" aria-label="Google, Microsoft, and Cisco credentials"><div className="marquee-track flex items-center gap-5">{marqueeBadges.map((badge, index) => <span key={`${badge.title}-${index}`} className="flex items-center gap-3 whitespace-nowrap rounded-full border border-orange-500/20 bg-orange-500/[0.06] px-5 py-3 font-mono text-xs text-orange-100/85"><Image src={badge.image} alt="" width={38} height={38} unoptimized className="h-9 w-9 object-contain" />{badge.title}</span>)}</div></section>
+
+    <section className="mx-auto grid max-w-7xl gap-4 px-6 py-28 sm:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-16"><div className="glass rounded-2xl p-7 sm:p-10"><p className="font-mono text-xs uppercase tracking-[0.2em] text-orange-500">Now building</p><h2 className="mt-6 text-3xl font-semibold tracking-[-0.05em] sm:text-5xl">Systems that hold up under pressure.</h2><p className="mt-6 text-sm leading-7 text-zinc-400">From edge devices and local models to cloud infrastructure, I build practical systems that turn ambitious ideas into dependable products.</p><a href="/experience" className="mt-8 inline-block text-sm text-orange-400 hover:text-orange-300">Explore experience ↗</a></div><div className="rounded-2xl border border-orange-500/25 bg-orange-500/[0.06] p-7 sm:p-10"><p className="font-mono text-xs uppercase tracking-[0.2em] text-orange-400">Credentials archive</p><p className="mt-6 text-6xl font-semibold tracking-[-0.08em] text-orange-100">{googleBadges.length + microsoftBadges.length + ciscoBadges.length}<span className="text-2xl text-orange-400">+</span></p><p className="mt-2 text-sm text-orange-100/60">Google, Microsoft Learn, Cisco, and verified certificate achievements.</p><a href="/credentials" className="mt-8 inline-block text-sm text-orange-300 hover:text-white">View all credentials ↗</a></div></section>
+
+    <section className="mx-auto max-w-7xl px-6 pb-28 sm:px-10 lg:px-16"><div className="mb-10 flex items-end justify-between border-t border-white/10 pt-8"><div><p className="font-mono text-xs uppercase tracking-[0.2em] text-orange-500">Recent experience</p><h2 className="mt-4 text-3xl font-semibold tracking-[-0.05em]">Work with purpose.</h2></div><a href="/experience" className="text-sm text-zinc-400 hover:text-white">Full timeline ↗</a></div><div className="grid gap-4 lg:grid-cols-3">{experience.slice(0, 3).map((item, index) => <motion.a whileHover={{ y: -4 }} href="/experience" key={item.company} className="glass rounded-2xl p-6"><span className="font-mono text-xs text-orange-500">0{index + 1} / {item.period}</span><h3 className="mt-12 text-xl font-semibold tracking-[-0.04em]">{item.role}</h3><p className="mt-2 text-sm text-orange-400">{item.company}</p><p className="mt-5 line-clamp-2 text-sm leading-6 text-zinc-500">{item.details[0]}</p></motion.a>)}</div></section>
+
+    <section className="mx-auto max-w-7xl px-6 pb-28 sm:px-10 lg:px-16"><div className="mb-10 flex items-end justify-between border-t border-white/10 pt-8"><div><p className="font-mono text-xs uppercase tracking-[0.2em] text-orange-500">Selected projects</p><h2 className="mt-4 text-3xl font-semibold tracking-[-0.05em]">Ideas made tangible.</h2></div><a href="/projects" className="text-sm text-zinc-400 hover:text-white">All projects ↗</a></div><div className="grid gap-4 md:grid-cols-3">{projects.map(([title, type, stack], index) => <a href="/projects" key={title} className="group rounded-2xl border border-white/10 bg-zinc-900/60 p-6 transition hover:-translate-y-1 hover:border-orange-500/40"><span className="font-mono text-xs text-zinc-600">0{index + 1}</span><h3 className="mt-16 text-2xl font-semibold tracking-[-0.05em] group-hover:text-orange-300">{title}</h3><p className="mt-3 text-sm text-orange-400">{type}</p><p className="mt-8 font-mono text-[10px] text-zinc-500">{stack}</p></a>)}</div></section>
+
+    <section className="mx-auto max-w-7xl px-6 pb-32 sm:px-10 lg:px-16"><div className="grid gap-5 rounded-3xl border border-white/10 bg-zinc-900/60 p-7 sm:p-10 lg:grid-cols-[0.8fr_1.2fr]"><div><p className="font-mono text-xs uppercase tracking-[0.2em] text-orange-500">Let&apos;s work together</p><h2 className="mt-6 text-4xl font-semibold tracking-[-0.06em] sm:text-5xl">Have a hard problem?</h2><p className="mt-5 text-sm leading-7 text-zinc-400">Send a brief note, call directly on WhatsApp, or book a focused appointment. I&apos;ll reply with the next useful step.</p><div className="mt-8 space-y-2 text-sm text-zinc-300"><a className="block hover:text-orange-300" href="tel:+923270177676">+92 327 0177676</a><a className="block hover:text-orange-300" href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn / Muhammad Ahmed ↗</a></div></div><form action={pageclipUrl} method="POST" className="border-t border-white/10 pt-8 lg:border-l lg:border-t-0 lg:pl-10"><div className="grid gap-5 sm:grid-cols-2"><label className="text-xs text-zinc-500">Name<input required name="name" type="text" className="mt-2 w-full border-b border-white/15 bg-transparent py-3 text-sm text-white outline-none focus:border-orange-500" placeholder="Your name" /></label><label className="text-xs text-zinc-500">Email<input required name="email" type="email" className="mt-2 w-full border-b border-white/15 bg-transparent py-3 text-sm text-white outline-none focus:border-orange-500" placeholder="you@company.com" /></label></div><label className="mt-6 block text-xs text-zinc-500">Message<textarea required name="message" rows={4} className="mt-2 w-full resize-none border-b border-white/15 bg-transparent py-3 text-sm leading-6 text-white outline-none focus:border-orange-500" placeholder="Hello Muhammad, I am reaching out from your website about..." /></label><button type="submit" className="mt-7 rounded-full bg-orange-500 px-6 py-3 text-sm font-bold text-black hover:bg-orange-400">Send message ↗</button></form></div></section>
+  </PageShell>;
 }
