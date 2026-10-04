@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FormEnhancer } from "@/components/FormEnhancer";
 import { calendlyUrl, githubUrl, googleDeveloperUrl, linkedinUrl, whatsappUrl } from "@/lib/portfolio-data";
 
 export function SiteNav() {
@@ -13,8 +14,12 @@ export function BuyCoffeeSection() {
   return <section className="mx-auto max-w-7xl px-6 py-20 sm:px-10 lg:px-16"><div className="grid items-center gap-8 rounded-3xl border border-orange-500/30 bg-orange-500/[0.05] p-7 sm:p-10 lg:grid-cols-[1fr_220px]"><div><p className="font-mono text-xs uppercase tracking-[0.2em] text-orange-400">Support the work</p><h2 className="mt-4 text-3xl font-semibold tracking-[-0.05em] text-zinc-100">Buy me a coffee</h2><p className="mt-4 max-w-xl text-sm leading-7 text-zinc-400">Coffee is cheaper than debugging at 3 a.m.</p><div className="mt-6 inline-flex rounded-full border border-orange-400/30 px-4 py-2 font-mono text-xs text-orange-200">Payment QR coming soon</div></div><div className="flex aspect-square items-center justify-center rounded-2xl border-2 border-dashed border-orange-400/60 bg-zinc-950/70 text-center"><span className="px-5 font-mono text-[10px] uppercase leading-5 tracking-[0.18em] text-orange-300/70">Rast<br />Payment QR<br />Placeholder</span></div></div></section>;
 }
 
+export function ContactPrompt() {
+  return <section className="mx-auto max-w-7xl px-6 pt-12 sm:px-10 lg:px-16"><div className="flex flex-col items-start justify-between gap-5 rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:flex-row sm:items-center sm:p-8"><div><p className="font-mono text-xs uppercase tracking-[0.2em] text-orange-500">Have a project in mind?</p><p className="mt-2 text-lg text-zinc-200">Let&apos;s turn the hard part into a working system.</p></div><a href="/contact" className="shrink-0 rounded-full border border-orange-400/40 px-5 py-3 text-sm font-bold text-orange-200 transition hover:bg-orange-500 hover:text-black">Start a conversation ↗</a></div></section>;
+}
+
 export function PageShell({ children }: { children: React.ReactNode }) {
-  return <><SiteNav /><div className="pointer-events-none fixed inset-0 z-0 opacity-60" aria-hidden="true"><div className="grid-lines absolute inset-0" /><div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-orange-700/20 blur-3xl" /><div className="absolute right-[-12rem] top-[30rem] h-[32rem] w-[32rem] rounded-full bg-red-700/15 blur-3xl" /></div><main className="relative z-10 min-h-screen bg-[#09090b] pt-28 text-zinc-100">{children}</main><BuyCoffeeSection /><Footer /><ContactFloaters /></>;
+  return <><FormEnhancer /><SiteNav /><div className="pointer-events-none fixed inset-0 z-0 opacity-60" aria-hidden="true"><div className="grid-lines absolute inset-0" /><div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-orange-700/20 blur-3xl" /><div className="absolute right-[-12rem] top-[30rem] h-[32rem] w-[32rem] rounded-full bg-red-700/15 blur-3xl" /></div><main className="relative z-10 min-h-screen bg-[#09090b] pt-28 text-zinc-100">{children}</main><ContactPrompt /><BuyCoffeeSection /><Footer /><ContactFloaters /></>;
 }
 
 export function Footer() {
