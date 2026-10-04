@@ -29,6 +29,9 @@ body {
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee-track { animation: marquee 32s linear infinite; width: max-content; }
 .marquee-track:hover { animation-play-state: paused; }
+.marquee-track a { width: 20rem; padding: 1rem; }
+.marquee-track a img { width: 6.75rem; height: 4.5rem; }
+img[src="/pfp.jpeg"] { border: 2px solid rgba(255, 107, 42, 0.9); box-shadow: 0 0 26px rgba(255, 69, 0, 0.35); }
 .badge-float { animation: badge-float 7s ease-in-out infinite; }
 .badge-float:nth-child(3n) { animation-delay: -2s; }
 .badge-float:nth-child(3n + 1) { animation-delay: -4s; }

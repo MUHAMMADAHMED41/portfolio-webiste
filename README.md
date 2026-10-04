@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Muhammad Ahmed | Computer Engineer & Lead AI Architect
 
-## Getting Started
+Official portfolio for **Muhammad Ahmed**, a Computer Engineer and Lead AI Architect from the **Institute of Space Technology (IST), Islamabad, Pakistan**.
 
-First, run the development server:
+The site presents his work across multi-agent AI, AI automation, edge computer vision, security operations, embedded systems, local AI, and performance-focused web infrastructure.
+
+## About Muhammad Ahmed
+
+Muhammad Ahmed architects scalable AI ecosystems and production automation infrastructure. His work combines Python, C/C++, TypeScript, cloud platforms, self-hosted LLMs, n8n, computer vision, IoT, and privacy-first edge computing.
+
+He is the Founder & CEO of LuaM Studio, Lead AI & Automation Engineer at Dialer Portal LLC, an independent global consultant, and an Ambassador for The Leap Pakistan's Safar-e-Karakoram learning programme.
+
+## Education
+
+- Institute of Space Technology, Islamabad, Pakistan
+- Computer Engineering
+- Gold Medal for Final Year Project
+
+## Featured Projects
+
+- **MediTwin:** AI-driven IoT preventive care using ESP32-C3 sensing, Firebase telemetry, and bilingual n8n WhatsApp triage.
+- **Distraction-Lock AI:** Edge-based biomechanical gaze tracking with OpenCV, MediaPipe Face Mesh, and YOLOv8.
+- **AI-Powered Log Analyzer:** SIEM and XDR automation using n8n, Ollama, Loki, and OpenSearch.
+- **Edge-AI Smart Home:** Zero-cloud Home Assistant, local LLM, QNAP, and Frigate NVR automation.
+- **Social Media Content Publishing Factory:** AI content generation, branded image creation, approval workflows, and multi-platform publishing.
+- **TradeRiser:** Self-hosted semantic search and trading data infrastructure with n8n, PostgreSQL, pgvector, and Ollama.
+- **CowCulate:** High-performance B2B AgriTech website integrated with GoHighLevel CRM, SEO, CI/CD, and WhatsApp routing.
+
+## Technical Focus
+
+Python, C/C++, TypeScript, PHP, SQL, Lua, Bash, LangChain, LangGraph, RAG, Hugging Face, YOLOv8, MediaPipe, OpenCV, AWS, Docker, CI/CD, Linux, NGINX, Redis, Firebase, OpenSearch, ESP32-C3, TensorFlow Lite, and Coral TPU.
+
+## Credentials
+
+The portfolio includes Google Developer Program badges, Microsoft Learn achievements, Cisco Networking Academy badges, Anthropic certificates, NAVTTC Machine Learning certification, Harvard CS50AI, WFEO Hackathon recognition, NASA Pixel certification, and additional uploaded certificate PDFs.
+
+## Social and Contact Links
+
+- Website: [muhammadahmedme.live](https://muhammadahmedme.live)
+- GitHub: [github.com/MUHAMMADAHMED41](https://github.com/MUHAMMADAHMED41)
+- LinkedIn: [linkedin.com/in/muhammadahmed41](https://www.linkedin.com/in/muhammadahmed41)
+- Google Developer Profile: [me.developers.google.com/u/muhammadahmed41](https://me.developers.google.com/u/muhammadahmed41)
+- Email: [ahmaadsarfraz@gmail.com](mailto:ahmaadsarfraz@gmail.com)
+- WhatsApp: [+92 327 0177676](https://wa.me/923270177676)
+- Calendly: [Book a 30-minute appointment](https://calendly.com/ahmaadsarfraz/30min)
+
+## Technology
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion
+- GitHub Pages static export
+- Pageclip contact form
+- SimpleAnalytics
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Production validation:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+The project is configured for GitHub Pages with `output: "export"`, a deployment workflow in `.github/workflows/deploy.yml`, and a custom domain in `public/CNAME`.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See [DEPLOYMENT.md](DEPLOYMENT.md) for GitHub Pages, Name.com DNS, Pageclip, HTTPS, and domain setup instructions.
