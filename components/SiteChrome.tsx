@@ -37,7 +37,7 @@ export function PageShell({ children }: { children: React.ReactNode }) {
 }
 
 export function Footer() {
-  return <footer className="relative z-10 border-t border-white/10 bg-[#09090b] px-6 py-8 text-xs text-zinc-500 sm:px-10 lg:px-16"><div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><span>© 2026 Muhammad Ahmed. AI Automation Specialist.</span><div className="flex flex-wrap gap-5"><a href={githubUrl} target="_blank" rel="noreferrer" className="hover:text-white">GitHub ↗</a><a href={linkedinUrl} target="_blank" rel="noreferrer" className="hover:text-white">LinkedIn ↗</a><a href={googleDeveloperUrl} target="_blank" rel="noreferrer" className="hover:text-white">Google Developer Profile ↗</a><a href="mailto:ahmaadsarfraz@gmail.com" className="hover:text-orange-300">Email ↗</a></div></div></footer>;
+  return <footer className="relative z-10 border-t border-white/10 bg-[#09090b] px-6 py-8 text-xs text-zinc-500 sm:px-10 lg:px-16"><div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><span>© 2026 Muhammad Ahmed. Computer Engineer &amp; AI Automation Specialist.</span><div className="flex flex-wrap gap-5"><a href={githubUrl} target="_blank" rel="noreferrer" className="hover:text-white">GitHub ↗</a><a href={linkedinUrl} target="_blank" rel="noreferrer" className="hover:text-white">LinkedIn ↗</a><a href={googleDeveloperUrl} target="_blank" rel="noreferrer" className="hover:text-white">Google Developer Profile ↗</a><a href="mailto:ahmaadsarfraz@gmail.com" className="hover:text-orange-300">Email ↗</a></div></div></footer>;
 }
 
 export function PageIntro({ kicker, title, description }: { kicker: string; title: string; description: string }) {
