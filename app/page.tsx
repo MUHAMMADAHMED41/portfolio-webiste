@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CertificateRail } from "@/components/CertificateRail";
+import { PlacesTrail } from "@/components/PlacesTrail";
 import { PageShell } from "@/components/SiteChrome";
 import { certificates, ciscoBadges, experience, freelanceProjects, googleBadges, linkedinUrl, microsoftBadgeImage, microsoftBadges } from "@/lib/portfolio-data";
 
@@ -38,5 +39,6 @@ export default function Home() {
 
     <section className="mx-auto max-w-7xl px-6 pb-32 sm:px-10 lg:px-16"><div className="grid gap-5 rounded-3xl border border-white/10 bg-zinc-900/60 p-7 sm:p-10 lg:grid-cols-[0.8fr_1.2fr]"><div><p className="font-mono text-xs uppercase tracking-[0.2em] text-orange-500">Let&apos;s work together</p><h2 className="mt-6 text-4xl font-semibold tracking-[-0.06em] sm:text-5xl">Have a hard problem?</h2><p className="mt-5 text-sm leading-7 text-zinc-400">Send a brief note, call directly on WhatsApp, or book a focused appointment. I&apos;ll reply with the next useful step.</p><div className="mt-8 space-y-2 text-sm text-zinc-300"><a className="block hover:text-orange-300" href="tel:+923270177676">+92 327 0177676</a><a className="block hover:text-orange-300" href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn / Muhammad Ahmed ↗</a></div></div><form action={pageclipUrl} method="POST" className="border-t border-white/10 pt-8 lg:border-l lg:border-t-0 lg:pl-10"><div className="grid gap-5 sm:grid-cols-2"><label className="text-xs text-zinc-500">Name<input required name="name" type="text" className="mt-2 w-full border-b border-white/15 bg-transparent py-3 text-sm text-white outline-none focus:border-orange-500" placeholder="Your name" /></label><label className="text-xs text-zinc-500">Email<input required name="email" type="email" className="mt-2 w-full border-b border-white/15 bg-transparent py-3 text-sm text-white outline-none focus:border-orange-500" placeholder="you@company.com" /></label></div><label className="mt-6 block text-xs text-zinc-500">Message<textarea required name="message" rows={4} className="mt-2 w-full resize-none border-b border-white/15 bg-transparent py-3 text-sm leading-6 text-white outline-none focus:border-orange-500" placeholder="Hello Muhammad, I am reaching out from your website about..." /></label><button type="submit" className="mt-7 rounded-full bg-orange-500 px-6 py-3 text-sm font-bold text-black hover:bg-orange-400">Send message ↗</button></form></div></section>
     <CertificateRail />
+    <PlacesTrail />
   </PageShell>;
 }

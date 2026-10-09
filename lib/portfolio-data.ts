@@ -119,3 +119,34 @@ export const coreProjects = [
 ];
 
 export const allProjects = [...coreProjects, ...freelanceProjects];
+
+export const places = [
+  { title: "Army Base", image: "/places/army-base.jpg" },
+  { title: "Bahria Town Phase 8, Rawalpindi", image: "/places/bahria-town-phase-8-rawalpinidi.png" },
+  { title: "Badminton Trophy, IST", image: "/places/bedminton-trophy-ist.jpg" },
+  { title: "Dawat, DHA Multan", image: "/places/dawat-dha-multan.png" },
+  { title: "DHA Askari Pool", image: "/places/dha-askari-pool.jpg" },
+  { title: "DIG Khan", image: "/places/dig-khan.jpeg" },
+  { title: "Faisalabad", image: "/places/faislabad.jpg" },
+  { title: "GDG, Blue Area", image: "/places/gdg-blue-area.jpg" },
+  { title: "Get Together, Sahlia Islamabad", image: "/places/get-to-gether-sahlia-islamabad.jpg" },
+  { title: "Gujranwala", image: "/places/gujranwala.png" },
+  { title: "KFC", image: "/places/kfc.jpg" },
+  { title: "Kashmir", image: "/places/kashmir.jpg" },
+  { title: "Kicsit, Kahuta", image: "/places/kicsit-kahuata.png" },
+  { title: "Kotli Sattian", image: "/places/kotli-sattain.png" },
+  { title: "Lahore", image: "/places/lahore.jpg" },
+  { title: "Lahore", image: "/places/lahore-1.jpg" },
+  { title: "Lahore", image: "/places/lahore-2.jpg" },
+  { title: "Mian Channu", image: "/places/main-channu.jpg" },
+  { title: "Multan", image: "/places/multan.png" },
+  { title: "Mushkpuri Top", image: "/places/muskpuritop.png" },
+  { title: "NASTP", image: "/places/nastp.jpg" },
+  { title: "Noori Waterfall", image: "/places/nooriwaterfall-1.png" },
+  { title: "Noori Waterfall", image: "/places/nooriwaterfall-2.png" },
+  { title: "Noori Waterfall", image: "/places/nooriwaterfall-3.png" },
+  { title: "Panjpir Rocks", image: "/places/panjpir-rocks.jpg" },
+  { title: "Snooker", image: "/places/snooker.jpg" },
+  { title: "Sweet Spot", image: "/places/sweet-spot.jpg" },
+  { title: "Tiba Sultan Pora", image: "/places/tiba-sultan-pora.jpg" },
+] as const;

@@ -34,6 +34,10 @@ Python, C/C++, TypeScript, PHP, SQL, Lua, Bash, LangChain, LangGraph, RAG, Huggi
 
 The portfolio includes Google Developer Program badges, Microsoft Learn achievements, Cisco Networking Academy badges, Anthropic certificates, NAVTTC Machine Learning certification, Harvard CS50AI, WFEO Hackathon recognition, NASA Pixel certification, and additional uploaded certificate PDFs.
 
+## Places Visited
+
+A travel log of towns, trips, and moments outside the terminal — shown as an animated trail on the homepage and a full gallery at `/places`.
+
 ## Social and Contact Links
 
 - Website: [muhammadahmedme.live](https://muhammadahmedme.live)
