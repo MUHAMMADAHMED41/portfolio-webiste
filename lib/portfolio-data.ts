@@ -121,6 +121,7 @@ export const coreProjects = [
 export const allProjects = [...coreProjects, ...freelanceProjects];
 
 export const places = [
+  { title: "NASTP", image: "/places/nastp.jpg" },
   { title: "Army Base", image: "/places/army-base.jpg" },
   { title: "Bahria Town Phase 8, Rawalpindi", image: "/places/bahria-town-phase-8-rawalpinidi.png" },
   { title: "Badminton Trophy, IST", image: "/places/bedminton-trophy-ist.jpg" },
@@ -141,7 +142,6 @@ export const places = [
   { title: "Mian Channu", image: "/places/main-channu.jpg" },
   { title: "Multan", image: "/places/multan.png" },
   { title: "Mushkpuri Top", image: "/places/muskpuritop.png" },
-  { title: "NASTP", image: "/places/nastp.jpg" },
   { title: "Noori Waterfall", image: "/places/nooriwaterfall-1.png" },
   { title: "Noori Waterfall", image: "/places/nooriwaterfall-2.png" },
   { title: "Noori Waterfall", image: "/places/nooriwaterfall-3.png" },
