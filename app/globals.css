@@ -56,5 +56,8 @@ img[src="/pfp.jpeg"] { border: 1px solid rgba(255, 107, 42, 0.9); box-shadow: 0 
 .qr-crop { aspect-ratio: 1; overflow: hidden; }
 .qr-crop-image { display: block; width: 125%; max-width: none; transform: translate(-10%, -10%); }
 .glass.fixed a[href="/"] { font-size: 1rem; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .marquee-track { animation-play-state: paused; }
+.journey-line { background-image: repeating-linear-gradient(to bottom, rgba(255, 107, 42, 0.55) 0 10px, transparent 10px 22px); }
+.journey-stop { opacity: 0; transform: translateY(48px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.journey-stop.is-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .marquee-track { animation-play-state: paused; } .journey-stop { opacity: 1; transform: none; transition: none; }
 }
