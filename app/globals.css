@@ -30,7 +30,7 @@ a[href$=".pdf"] { pointer-events: none; }
 .glass { background: linear-gradient(135deg, rgba(24,24,27,.74), rgba(9,9,11,.58)); border: 1px solid rgba(255,255,255,.1); box-shadow: inset 0 1px rgba(255,255,255,.055), 0 24px 80px rgba(0,0,0,.2); backdrop-filter: blur(18px); }
 .text-gradient { background: linear-gradient(110deg, #fff 18%, #ff6a2a 62%, #e63946); background-clip: text; color: transparent; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.marquee-track { animation: marquee 32s linear infinite; width: max-content; }
+.marquee-track { animation: marquee 36s linear infinite; width: max-content; }
 .marquee-track:hover { animation-play-state: paused; }
 .marquee-track a { width: 20rem; padding: 1rem; }
 .marquee-track a img { width: 6.75rem; height: 4.5rem; }
