@@ -13,6 +13,30 @@ export const metadata: Metadata = {
   icons: { icon: "/icon.svg", shortcut: "/icon.svg", apple: "/icon.svg" },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Muhammad Ahmed",
+  jobTitle: "Computer Engineer & AI Automation Specialist",
+  url: "https://muhammadahmedme.live",
+  image: "https://muhammadahmedme.live/pfp.jpeg",
+  sameAs: [
+    "https://github.com/muhammadahmed41",
+    "https://www.linkedin.com/in/muhammadahmed41",
+    "https://me.developers.google.com/u/muhammadahmed41",
+  ],
+  alumniOf: { "@type": "CollegeOrUniversity", name: "Institute of Space Technology" },
+  address: { "@type": "PostalAddress", addressLocality: "Islamabad", addressCountry: "PK" },
+  knowsAbout: ["AI automation", "n8n workflows", "self-hosted LLMs", "edge computer vision", "security automation", "multi-agent AI systems"],
+  makesOffer: {
+    "@type": "Offer",
+    itemOffered: { "@type": "Service", name: "AI automation & engineering consultancy", description: "Multi-agent AI systems, self-hosted LLM pipelines, edge computer vision, and security automation." },
+  },
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  return <html lang="en" className="h-full antialiased"><body className="min-h-full">{children}</body></html>;
+  return <html lang="en" className="h-full antialiased"><body className="min-h-full">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+    {children}
+  </body></html>;
 }

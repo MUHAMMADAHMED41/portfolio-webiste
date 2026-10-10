@@ -1,7 +1,22 @@
+import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import { PageFaq } from "@/components/PageFaq";
 import { PageIntro, PageShell } from "@/components/SiteChrome";
 import { calendlyUrl, whatsappUrl } from "@/lib/portfolio-data";
 
+export const metadata: Metadata = {
+  title: "Contact | Hire Muhammad Ahmed",
+  description: "Get in touch with Muhammad Ahmed for AI automation, edge computer vision, and engineering projects. Message on WhatsApp, book a call, or send an email.",
+  alternates: { canonical: "/contact" },
+};
+
 export default function ContactPage() {
-  return <PageShell><PageIntro kicker="05 / Contact" title="Bring a hard problem." description="For AI systems, automation infrastructure, edge computer vision, or a thoughtful technical collaboration, send a note or book a focused appointment." /><section className="mx-auto grid max-w-6xl gap-5 px-6 pb-32 sm:px-10 lg:grid-cols-[0.8fr_1.2fr] lg:px-16"><div className="glass rounded-2xl p-7 sm:p-10"><p className="font-mono text-xs uppercase tracking-[0.2em] text-orange-500">Direct channels</p><h2 className="mt-8 text-3xl font-semibold tracking-[-0.05em]">Choose the pace that works for you.</h2><div className="mt-12 space-y-4"><a href={whatsappUrl} target="_blank" rel="noreferrer" className="block rounded-xl border border-emerald-400/20 bg-emerald-400/[0.06] p-4 text-sm text-emerald-100 hover:border-emerald-300/50">WhatsApp / +92 327 0177676 <span className="float-right">↗</span><span className="mt-2 block text-xs text-emerald-100/50">Open a professional project enquiry.</span></a><a href={calendlyUrl} target="_blank" rel="noreferrer" className="block rounded-xl border border-orange-400/20 bg-orange-400/[0.06] p-4 text-sm text-orange-100 hover:border-orange-300/50">Book an appointment <span className="float-right">↗</span><span className="mt-2 block text-xs text-orange-100/50">Choose a time for a focused conversation.</span></a><a href="mailto:ahmaadsarfraz@gmail.com" className="block border-b border-white/10 py-4 text-sm text-zinc-300 hover:text-orange-300">ahmaadsarfraz@gmail.com ↗</a></div></div><ContactForm /></section></PageShell>;
+  return <PageShell><PageIntro kicker="05 / Contact" title="Bring a hard problem." description="For AI systems, automation infrastructure, edge computer vision, or a thoughtful technical collaboration, send a note or book a focused appointment." /><section className="mx-auto grid max-w-6xl gap-5 px-6 pb-32 sm:px-10 lg:grid-cols-[0.8fr_1.2fr] lg:px-16"><div className="glass rounded-2xl p-7 sm:p-10"><p className="font-mono text-xs uppercase tracking-[0.2em] text-orange-500">Direct channels</p><h2 className="mt-8 text-3xl font-semibold tracking-[-0.05em]">Choose the pace that works for you.</h2><div className="mt-12 space-y-4"><a href={whatsappUrl} target="_blank" rel="noreferrer" className="block rounded-xl border border-emerald-400/20 bg-emerald-400/[0.06] p-4 text-sm text-emerald-100 hover:border-emerald-300/50">WhatsApp / +92 327 0177676 <span className="float-right">↗</span><span className="mt-2 block text-xs text-emerald-100/50">Open a professional project enquiry.</span></a><a href={calendlyUrl} target="_blank" rel="noreferrer" className="block rounded-xl border border-orange-400/20 bg-orange-400/[0.06] p-4 text-sm text-orange-100 hover:border-orange-300/50">Book an appointment <span className="float-right">↗</span><span className="mt-2 block text-xs text-orange-100/50">Choose a time for a focused conversation.</span></a><a href="mailto:ahmaadsarfraz@gmail.com" className="block border-b border-white/10 py-4 text-sm text-zinc-300 hover:text-orange-300">ahmaadsarfraz@gmail.com ↗</a></div></div><ContactForm /></section><PageFaq
+    heading="Starting a remote freelance or AI automation project"
+    items={[
+      { q: "How fast do you respond to new project enquiries?", a: "Typically within a day. WhatsApp is the fastest channel for a direct reply with a concrete next step." },
+      { q: "Do you take on remote freelance contracts outside Pakistan?", a: "Yes. Current and past clients are based in Italy, Spain, and the UAE, and all project work is handled remotely with clear async communication." },
+      { q: "What information should I include when reaching out about a web development or automation project?", a: "A short description of the problem, your rough timeline, and whether you need a new build or automation added to an existing system. That is enough to get a useful first reply." },
+    ]}
+  /></PageShell>;
 }
