@@ -12,7 +12,7 @@ export function PageFaq({ heading, items }: { heading: string; items: FaqItem[] 
   };
 
   return (
-    <section className="mx-auto max-w-5xl px-6 pb-24 sm:px-10 lg:px-16">
+    <section className="page-faq-section mx-auto max-w-5xl px-6 pb-24 sm:px-10 lg:px-16">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="border-t border-white/10 pt-12">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-orange-500">FAQ</p>
