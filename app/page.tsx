@@ -51,10 +51,10 @@ export default function Home() {
     <PageFaq
       heading="Hiring for web development, remote freelance, or AI automation work?"
       items={[
-        { q: "Are you available for freelance remote web development jobs?", a: "Yes. I take on remote freelance web development projects, from fast marketing sites to full-stack platforms with Next.js, React, and custom CMS or CRM integrations, for clients worldwide." },
-        { q: "Do you specialize in AI automation projects?", a: "Yes, AI automation is my primary focus. I build n8n workflows, self-hosted LLM pipelines with Ollama, multi-agent systems integrating Claude, ChatGPT, and Gemini, and production-grade automation that replaces manual, repetitive work." },
-        { q: "Can I hire you for a short-term remote contract or an ongoing retainer?", a: "Both. I work with clients on one-off builds, fixed-scope freelance projects, and ongoing remote retainers for automation maintenance, AI system upgrades, and web platform support." },
-        { q: "What is the best way to start a project with you?", a: "Message me on WhatsApp or book a call directly from this site with a short description of what you need. I reply with a concrete next step, not a generic form response." },
+        { q: "Are you available for freelance remote web development jobs?", a: "Yes. I take on remote freelance web development projects, from fast marketing sites to full-stack platforms with Next.js, React, and custom CMS or CRM integrations, for clients worldwide.", ctaHref: "/projects", ctaLabel: "See past web projects" },
+        { q: "Do you specialize in AI automation projects?", a: "Yes, AI automation is my primary focus. I build n8n workflows, self-hosted LLM pipelines with Ollama, multi-agent systems integrating Claude, ChatGPT, and Gemini, and production-grade automation that replaces manual, repetitive work.", ctaHref: "/experience", ctaLabel: "See automation experience" },
+        { q: "Can I hire you for a short-term remote contract or an ongoing retainer?", a: "Both. I work with clients on one-off builds, fixed-scope freelance projects, and ongoing remote retainers for automation maintenance, AI system upgrades, and web platform support.", ctaHref: "/contact", ctaLabel: "Start a conversation" },
+        { q: "What is the best way to start a project with you?", a: "Message me on WhatsApp or book a call directly from this site with a short description of what you need. I reply with a concrete next step, not a generic form response.", ctaHref: whatsappUrl, ctaLabel: "Message on WhatsApp" },
       ]}
     />
   </PageShell>;
